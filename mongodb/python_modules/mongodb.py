@@ -35,8 +35,8 @@ import time
 
 NAME_PREFIX = 'mongodb_'
 PARAMS = {
-    'server_status' : '~/mongodb-osx-x86_64-1.8.1/bin/mongo --host mongodb04.example.com --port 27018 --quiet --eval "printjson(db.serverStatus())"',
-    'rs_status'     : '~/mongodb-osx-x86_64-1.8.1/bin/mongo --host mongodb04.example.com --port 27018 --quiet --eval "printjson(rs.status())"'
+    'server_status' : '/usr/bin/mongo --host localhost --port 27017 --quiet --eval "printjson(db.serverStatus())"',
+    'rs_status'     : '/usr/bin/mongo --host localhost --port 27017 --quiet --eval "printjson(rs.status())"'
 }
 METRICS = {
     'time' : 0,
