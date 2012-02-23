@@ -23,6 +23,14 @@ python module for ganglia 3.1.
 ## NOTES
  * This has only been tested on python 2.6.5 on Ubuntu 10.04.
  * Ensure that the status stub module is setup correctly when using this module.
+ * Add this to default in /etc/nginx/sites-available/.
+	location /nginx_status {
+            stub_status on;
+            access_log   off;
+            allow 127.0.0.1;
+            deny all;
+        }
+  * Add the custom reports inside graph.d folder to ganglia-webfrontend/graph.d folder and update the conf.php file to add $optional_graphs.
 
 ## AUTHOR
 
