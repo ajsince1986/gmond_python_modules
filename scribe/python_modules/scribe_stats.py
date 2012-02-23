@@ -24,7 +24,7 @@ def GetOverallMessagesPerSecond(name):
     global last_mps_timestamp, last_mps_value
 
     # get the current value
-    rc, output = run_cmd(["/usr/sbin/scribe_ctrl", "counters"])
+    rc, output = run_cmd(["/usr/bin/scribectl", "counters", "1463"])
 
     # return 0 if command fails
     if rc:
